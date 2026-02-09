@@ -1,0 +1,38 @@
+site_name: 私のレシピ帳
+site_url: https://famnomura.github.io/Cookbook/  # 後でGitHub PagesのURLに書き換えますが、今は仮でOK
+repo_url: https://github.com/FamNomura/Cookbook  # 後で自分のリポジトリURLに書き換えます
+repo_name: GitHub
+
+theme:
+  name: material
+  language: ja
+  palette:
+    # ライトモードの設定
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: ダークモードに切り替え
+    # ダークモードの設定
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: ライトモードに切り替え
+  features:
+    - navigation.expand       # カテゴリをデフォルトで展開
+    - navigation.top          # "トップに戻る"ボタンを表示
+    - search.suggest          # 検索候補を表示
+    - search.highlight        # 検索結果をハイライト
+
+plugins:
+  - search:
+      lang: ja                # 日本語検索を有効化
+
+markdown_extensions:
+  - admonition                # コラム表示用
+  - pymdownx.details          # 折りたたみ表示用
+  - pymdownx.superfences      # 高度なコードブロック（レイアウト崩れ防止）
+  - attr_list                 # 画像サイズ調整用
